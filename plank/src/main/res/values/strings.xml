@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Plank 5 Minutes</string>
+    <string name="level">训练</string>
+    <string name="statistics">统计数据</string>
+    <string name="level_1">肥宅青铜</string>
+    <string name="level_2">伸手白银</string>
+    <string name="level_3">入门黄金</string>
+    <string name="level_4">坚韧铂金</string>
+    <string name="level_5">健身钻石</string>
+    <string name="level_6">肌肉皇冠</string>
+    <string name="level_7">毛睿王牌</string>
+    <string name="level_8">荣耀狂魔</string>
+    <string name="level_time1">计时2:00分钟</string>
+    <string name="level_time2">计时3:00分钟</string>
+    <string name="level_time3">计时3:50分钟</string>
+    <string name="level_time4">计时6:15分钟</string>
+    <string name="level_time5">计时6:45分钟</string>
+    <string name="level_time6">计时8:00分钟</string>
+    <string name="level_time7">计时11:30分钟</string>
+    <string name="level_time8">计时15:00分钟</string>
+
+</resources>
