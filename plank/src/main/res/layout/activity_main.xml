@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorTitle"
     >
 
     <RelativeLayout
         android:id="@+id/title"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:background="@color/colorPrimary"
         >
         <TextView
             android:id="@+id/name"
@@ -19,41 +19,50 @@
             android:text="@string/app_name"
             android:textSize="20sp"
             android:layout_marginLeft="10dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="35dp"
             android:textColor="#fff"
             />
         <TextView
             android:id="@+id/title1"
-            android:layout_width="80dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_below="@id/name"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:text="@string/level"
             android:textColor="#fff"
+            android:textSize="18sp"
             />
 
         <TextView
             android:id="@+id/title2"
-            android:layout_width="80dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/name"
             android:layout_toRightOf="@id/title1"
             android:gravity="center"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="10dp"
             android:text="@string/statistics"
             android:textColor="#fff"
+            android:textSize="18sp"
             />
 
     </RelativeLayout>
-    <LinearLayout
-        android:id="@+id/content"
+    <TextView
+        android:id="@+id/page_line"
+        android:layout_width="100dp"
+        android:layout_height="5dp"
+        android:background="#ff7f00"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintBottom_toTopOf="@id/main_viewpager"
+        />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/main_viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="@id/title"
+        android:background="#fff"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginTop="100dp"
-        android:layout_marginBottom="5dp"
-        >
-    </LinearLayout>
+        />
 </android.support.constraint.ConstraintLayout>

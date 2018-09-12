@@ -1,0 +1,330 @@
+{
+  "data": [
+    {
+      "color_key": "#FFC5A6AB",
+      "desc_key": "level_1",
+      "img_src": "male_full_plank",
+      "exercises": [
+        {
+          "name_key": "full_plank",
+          "duration": 30000,
+          "img_key": "male_full_plank"
+        },
+        {
+          "name_key": "side_plank_left",
+          "duration": 15000,
+          "img_key": "male_side_plank_left"
+        },
+        {
+          "name_key": "side_plank_right",
+          "duration": 15000,
+          "img_key": "male_side_plank_right"
+        },
+        {
+          "name_key": "elbow_plank",
+          "duration": 30000,
+          "img_key": "male_elbow_plank"
+        },
+        {
+          "name_key": "full_plank",
+          "duration": 30000,
+          "img_key": "male_full_plank"
+        }
+      ]
+    },
+    {
+      "color_key": "#FF84869D",
+      "desc_key": "level_2",
+      "img_src": "male_reverse_plank",
+      "exercises": [
+        {
+          "name_key": "full_plank",
+          "duration": 40000,
+          "img_key": "male_full_plank"
+        },
+        {
+          "name_key": "side_plank_left",
+          "duration": 30000,
+          "img_key": "male_side_plank_left"
+        },
+        {
+          "name_key": "side_plank_right",
+          "duration": 30000,
+          "img_key": "male_side_plank_right"
+        },
+        {
+          "name_key": "reverse_plank",
+          "duration": 40000,
+          "img_key": "male_reverse_plank"
+        },
+        {
+          "name_key": "elbow_plank",
+          "duration": 40000,
+          "img_key": "male_elbow_plank"
+        }
+      ]
+    },
+    {
+      "color_key": "#FFB9925B",
+      "desc_key": "level_3",
+      "img_src": "male_elbow_plank",
+      "exercises": [
+        {
+          "name_key": "full_plank",
+          "duration": 45000,
+          "img_key": "male_full_plank"
+        },
+        {
+          "name_key": "elbow_plank",
+          "duration": 45000,
+          "img_key": "male_elbow_plank"
+        },
+        {
+          "name_key": "kickbacks_of_hands_plank_left",
+          "duration": 25000,
+          "img_key": "male_kick_backs_hand_left"
+        },
+        {
+          "name_key": "kickbacks_of_hands_plank_right",
+          "duration": 25000,
+          "img_key": "male_kick_backs_hand_right"
+        },
+        {
+          "name_key": "reverse_plank",
+          "duration": 45000,
+          "img_key": "male_reverse_plank"
+        },
+        {
+          "name_key": "full_plank",
+          "duration": 45000,
+          "img_key": "male_full_plank"
+        }
+      ]
+    },
+    {
+      "color_key": "#FF778FAB",
+      "desc_key": "level_4",
+      "img_src": "male_full_plank_raised_leg_left",
+      "exercises": [
+        {
+          "name_key": "full_plank",
+          "duration": 60000,
+          "img_key": "male_full_plank"
+        },
+        {
+          "name_key": "elbow_plank",
+          "duration": 45000,
+          "img_key": "male_elbow_plank"
+        },
+        {
+          "name_key": "raised_plank_left",
+          "duration": 45000,
+          "img_key": "male_full_plank_raised_leg_left"
+        },
+        {
+          "name_key": "raised_plank_right",
+          "duration": 45000,
+          "img_key": "male_full_plank_raised_leg_right"
+        },
+        {
+          "name_key": "side_plank_left",
+          "duration": 45000,
+          "img_key": "male_side_plank_left"
+        },
+        {
+          "name_key": "side_plank_right",
+          "duration": 45000,
+          "img_key": "male_side_plank_right"
+        },
+        {
+          "name_key": "full_plank",
+          "duration": 45000,
+          "img_key": "male_full_plank"
+        },
+        {
+          "name_key": "elbow_plank",
+          "duration": 45000,
+          "img_key": "male_elbow_plank"
+        }
+      ]
+    },
+    {
+      "color_key": "#FF9D88AF",
+      "desc_key": "level_5",
+      "img_src": "male_hip_dips_plank_down_left",
+      "exercises": [
+        {
+          "name_key": "full_plank",
+          "duration": 60000,
+          "img_key": "male_full_plank"
+        },
+        {
+          "name_key": "elbow_plank",
+          "duration": 60000,
+          "img_key": "male_elbow_plank"
+        },
+        {
+          "name_key": "side_plank_left",
+          "duration": 60000,
+          "img_key": "male_side_plank_left"
+        },
+        {
+          "name_key": "side_plank_right",
+          "duration": 60000,
+          "img_key": "male_side_plank_right"
+        },
+        {
+          "name_key": "side_plank_raised_leg_left",
+          "duration": 60000,
+          "img_key": "male_side_plank_leg_raised_left"
+        },
+        {
+          "name_key": "side_plank_raised_leg_right",
+          "duration": 60000,
+          "img_key": "male_side_plank_leg_raised_right"
+        },
+        {
+          "name_key": "full_plank",
+          "duration": 45000,
+          "img_key": "male_full_plank"
+        }
+      ]
+    },
+    {
+      "color_key": "#FFBF905A",
+      "desc_key": "level_6",
+      "img_src": "male_reverse_leg_raised_plank_left",
+      "exercises": [
+        {
+          "name_key": "full_plank",
+          "duration": 90000,
+          "img_key": "male_full_plank"
+        },
+        {
+          "name_key": "elbow_plank",
+          "duration": 90000,
+          "img_key": "male_elbow_plank"
+        },
+        {
+          "name_key": "kickbacks_of_hands_plank_left",
+          "duration": 45000,
+          "img_key": "male_kick_backs_hand_left"
+        },
+        {
+          "name_key": "kickbacks_of_hands_plank_right",
+          "duration": 45000,
+          "img_key": "male_kick_backs_hand_right"
+        },
+        {
+          "name_key": "side_plank_hip_dips_left",
+          "duration": 60000,
+          "img_key": "male_hip_dips_plank_down_left"
+        },
+        {
+          "name_key": "side_plank_hip_dips_right",
+          "duration": 60000,
+          "img_key": "male_hip_dips_plank_down_right"
+        },
+        {
+          "name_key": "reverse_plank_legs_raised_left",
+          "duration": 45000,
+          "img_key": "male_reverse_leg_raised_plank_left"
+        },
+        {
+          "name_key": "reverse_plank_legs_raised_right",
+          "duration": 45000,
+          "img_key": "male_reverse_leg_raised_plank_right"
+        }
+      ]
+    },
+    {
+      "color_key": "#FF7A3C25",
+      "desc_key": "level_7",
+      "img_src": "male_push_up_plank",
+      "exercises": [
+        {
+          "name_key": "push_up_plank",
+          "duration": 90000,
+          "img_key": "male_push_up_plank"
+        },
+        {
+          "name_key": "side_plank_left",
+          "duration": 120000,
+          "img_key": "male_side_plank_left"
+        },
+        {
+          "name_key": "side_plank_right",
+          "duration": 120000,
+          "img_key": "male_side_plank_right"
+        },
+        {
+          "name_key": "elbow_plank",
+          "duration": 180000,
+          "img_key": "male_elbow_plank"
+        },
+        {
+          "name_key": "full_plank",
+          "duration": 180000,
+          "img_key": "male_full_plank"
+        }
+      ]
+    },
+    {
+      "color_key": "#FFBC1717",
+      "desc_key": "level_8",
+      "img_src": "male_full_plank_leg_hand_raised_left",
+      "exercises": [
+        {
+          "name_key": "elbow_plank",
+          "duration": 120000,
+          "img_key": "male_elbow_plank"
+        },
+        {
+          "name_key": "side_plank_hip_dips_left",
+          "duration": 75000,
+          "img_key": "male_hip_dips_plank_down_left"
+        },
+        {
+          "name_key": "side_plank_hip_dips_right",
+          "duration": 75000,
+          "img_key": "male_hip_dips_plank_down_right"
+        },
+        {
+          "name_key": "right_hand_left_leg_raise_plank",
+          "duration": 60000,
+          "img_key": "male_full_plank_leg_hand_raised_left"
+        },
+        {
+          "name_key": "left_hand_right_leg_raise_plank",
+          "duration": 60000,
+          "img_key": "male_full_plank_leg_hand_raised_right"
+        },
+        {
+          "name_key": "full_plank",
+          "duration": 150000,
+          "img_key": "male_full_plank"
+        },
+        {
+          "name_key": "reverse_plank_legs_raised_right",
+          "duration": 120000,
+          "img_key": "male_reverse_leg_raised_plank_right"
+        },
+        {
+          "name_key": "kickbacks_of_hands_plank_left",
+          "duration": 45000,
+          "img_key": "male_kick_backs_hand_left"
+        },
+        {
+          "name_key": "kickbacks_of_hands_plank_right",
+          "duration": 45000,
+          "img_key": "male_kick_backs_hand_right"
+        },
+        {
+          "name_key": "push_up_plank",
+          "duration": 150000,
+          "img_key": "male_push_up_plank"
+        }
+      ]
+    }
+  ]
+}

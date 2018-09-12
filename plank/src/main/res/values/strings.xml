@@ -9,14 +9,39 @@
     <string name="level_5">健身钻石</string>
     <string name="level_6">肌肉皇冠</string>
     <string name="level_7">毛睿王牌</string>
-    <string name="level_8">荣耀狂魔</string>
-    <string name="level_time1">计时2:00分钟</string>
-    <string name="level_time2">计时3:00分钟</string>
-    <string name="level_time3">计时3:50分钟</string>
-    <string name="level_time4">计时6:15分钟</string>
-    <string name="level_time5">计时6:45分钟</string>
-    <string name="level_time6">计时8:00分钟</string>
-    <string name="level_time7">计时11:30分钟</string>
-    <string name="level_time8">计时15:00分钟</string>
+    <string name="level_8">魔鬼肌肉人</string>
+    <string name="level_time">计时%s分钟</string>
+    <string name="elbow_plank">手肘</string>
+    <string name="finish">so good ！你完成了！</string>
+    <string name="full_plank">全</string>
+    <string name="kickbacks_of_hands_plank_left">左臂屈伸</string>
+    <string name="kickbacks_of_hands_plank_right">右臂屈伸</string>
+    <string name="left_hand_right_leg_raise_plank">举起左手和右脚</string>
+    <string name="push_up_plank">伏地挺身</string>
+    <string name="raised_hand_plank">举手</string>
+    <string name="raised_hand_plank_left">举左手</string>
+    <string name="raised_hand_plank_right">举右手</string>
+    <string name="raised_plank">举脚</string>
+    <string name="raised_plank_left">举左脚</string>
+    <string name="raised_plank_right">举右脚</string>
+    <string name="reverse_plank">反</string>
+    <string name="reverse_plank_left">反向左</string>
+    <string name="reverse_plank_legs_raised_left">反向抬左脚</string>
+    <string name="reverse_plank_legs_raised_right">反向抬右脚</string>
+    <string name="reverse_plank_right">反向右</string>
+    <string name="right_hand_left_leg_raise_plank">举起右手左脚</string>
+    <string name="side_plank">侧</string>
+    <string name="side_plank_hip_dips_left">左臀</string>
+    <string name="side_plank_hip_dips_right">右臀</string>
+    <string name="side_plank_left">侧左</string>
+    <string name="side_plank_raised_leg_left">抬左脚</string>
+    <string name="side_plank_raised_leg_right">抬右脚</string>
+    <string name="side_plank_right">侧右</string>
+    <string name="title_activity_physical_training">PhysicalTrainingActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
