@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 /**
- * Created by shao on 2018/9/5.
+ * Created by ushang on 2018/9/5.
  */
 
 public abstract class LazyLoadFragment extends Fragment {

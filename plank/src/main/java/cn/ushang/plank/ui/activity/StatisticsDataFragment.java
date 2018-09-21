@@ -163,12 +163,9 @@ public class StatisticsDataFragment extends LazyLoadFragment implements View.OnC
 
 
     private void getWeekDay(int firstDayOfWeek) {
-        // 获取本周的第一天
-        //int firstDayOfWeek = calendar.getFirstDayOfWeek();
         for (int i = 0; i < 7; i++) {
             Calendar calendar = Calendar.getInstance();
             calendar.add(Calendar.DATE, firstDayOfWeek + i);
-            // 获取星期的显示名称，例如：周一、星期一、Monday等等
             String day = new SimpleDateFormat("yyyyMMdd").format(calendar.getTime());
             float data=plankData.getFloat(day,0);
             Log.i("shao"," data : "+day+" : "+data);

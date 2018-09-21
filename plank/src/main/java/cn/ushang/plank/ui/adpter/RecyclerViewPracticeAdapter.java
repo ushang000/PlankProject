@@ -20,7 +20,7 @@ import cn.ushang.plank.model.LevelData;
 import cn.ushang.plank.utils.ResourceGet;
 
 /**
- * Created by shao on 2018/8/27.
+ * Created by ushang on 2018/8/27.
  */
 
 public class RecyclerViewPracticeAdapter extends RecyclerView.Adapter<RecyclerViewPracticeAdapter.MyHolder> implements View.OnClickListener {

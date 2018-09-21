@@ -3,7 +3,7 @@ package cn.ushang.plank.model;
 import java.io.Serializable;
 
 /**
- * Created by shao on 2018/8/31.
+ * Created by ushang on 2018/8/31.
  */
 
 public class Exercise implements Serializable {

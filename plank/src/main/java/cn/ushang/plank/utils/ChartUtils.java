@@ -35,10 +35,11 @@ import java.util.List;
 import cn.ushang.plank.R;
 
 /**
- * Created by shao on 2018/9/7.
+ * Created by ushang on 2018/9/7.
  */
 
 public class ChartUtils {
+
 
     public static void initBarChart(BarChart barChart, List<String> myBarValues, List<String> xVaules){
         ArrayList<BarEntry> values=new ArrayList<>();
@@ -183,15 +184,21 @@ public class ChartUtils {
         xAxis.setTextColor(0xff248ECC);
         YAxis yAxis=lineChart.getAxisLeft();
         yAxis.setLabelCount(5);
+        //遗留问题,暂时这么解决
+        int maxValue=0;
         yAxis.setAxisMaximum(5);
         for(int i=0;i<myValues.size();i++){
-            if(myValues.get(i)>5){
-                //lineChart.getAxisLeft().setLabelCount(5);
-                yAxis.resetAxisMaximum();
-                yAxis.setAxisMaximum(myValues.get(i).intValue()+2);
-                Log.i("shao","111111111111111  "+yAxis.getAxisMaximum());
-                break;
+            int temp=myValues.get(i).intValue();
+            if(temp<5){
+                continue;
+            }else {
+                maxValue=maxValue<temp?temp:maxValue;
             }
+        }
+        if(maxValue>=5){
+            lineChart.getAxisLeft().setLabelCount(3);
+            yAxis.resetAxisMaximum();
+            yAxis.setAxisMaximum(maxValue+2);
         }
         yAxis.setDrawAxisLine(false);
         yAxis.setAxisMinimum(0f);
@@ -267,7 +274,7 @@ public class ChartUtils {
         public MyMarkerView(Context context, int layoutResource) {
             super(context, layoutResource);
             textView=findViewById(R.id.tv_content);
-            format=new DecimalFormat("### m");
+            format=new DecimalFormat("##.# m");
         }
 
         @Override

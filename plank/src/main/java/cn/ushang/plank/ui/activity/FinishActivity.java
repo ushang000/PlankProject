@@ -9,7 +9,11 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -24,6 +28,7 @@ public class FinishActivity extends AppCompatActivity {
     private ResourceGet resource;
     private SharedPreferences plankDatas;
     private Calendar calendar;
+    private ImageView crunches;
     private int duration=0;
 
     @Override
@@ -37,20 +42,22 @@ public class FinishActivity extends AppCompatActivity {
         plankDatas = getSharedPreferences("StatisticsDatas", MODE_PRIVATE);
         calendar = Calendar.getInstance();
         String dataKey=new SimpleDateFormat("yyyyMMdd").format(calendar.getTime());
-        //String dataKey="20180905";
+        //String dataKey="20180910";
         Intent intent = getIntent();
         duration=intent.getIntExtra("duration", 0);
         resource = new ResourceGet(this);
         finishLevelName = findViewById(R.id.finish_level_name);
         finishLevelTime = findViewById(R.id.finish_level_time);
+        crunches=findViewById(R.id.crunches);
         finishLevelName.setText(resource.getNameString(intent.getStringExtra("desc_name")));
         finishLevelName.setTextColor(Color.parseColor(intent.getStringExtra("color_key")));
         finishLevelTime.setText(resource.getDurationFormatted(duration) + " 分钟");
+        Glide.with(this).load(R.mipmap.abs_male_recomend).asGif().diskCacheStrategy(DiskCacheStrategy.SOURCE).into(crunches);
         //plankDatas.edit().clear().apply();
         float beforeDatas=plankDatas.getFloat(dataKey,0);
         plankDatas.edit()
                 .putFloat(dataKey, (float) duration/(1000*60)+beforeDatas)
-                .apply();
+                .commit();
     }
 
     public void finished(View view) {

@@ -1,7 +1,9 @@
 <resources>
-    <string name="app_name">Plank 5 Minutes</string>
+    <string name="app_name">Plank 5分钟</string>
     <string name="level">训练</string>
     <string name="statistics">统计数据</string>
+    <string name="crunches">ABS Workout\n让你的腹肌更快塑造成型</string>
+    <string name="tips2">健身虽好，可不要贪恋哦</string>
     <string name="level_1">肥宅青铜</string>
     <string name="level_2">伸手白银</string>
     <string name="level_3">入门黄金</string>
@@ -37,6 +39,8 @@
     <string name="side_plank_raised_leg_left">抬左脚</string>
     <string name="side_plank_raised_leg_right">抬右脚</string>
     <string name="side_plank_right">侧右</string>
+    <string name="tips">谨记：中途退出将丢失数据!</string>
+
     <string name="title_activity_physical_training">PhysicalTrainingActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>

@@ -1,12 +1,23 @@
 package cn.ushang.plank.ui.activity;
 
+import android.Manifest;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.content.res.AssetManager;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Build;
+import android.provider.Settings;
+import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -16,6 +27,8 @@ import android.view.WindowManager;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
+import com.umeng.analytics.MobclickAgent;
+import com.umeng.commonsdk.UMConfigure;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -44,6 +57,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView main_statistics;
     private TextView page_line;
 
+    private String [] PERMISSIONS=new String[]{
+            Manifest.permission.READ_PHONE_STATE,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE
+    };
+    private static final int OPEN_REQUEST_CODE=15;
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -55,6 +73,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             getWindow().setStatusBarColor(Color.TRANSPARENT);//防止5.x以后半透明影响效果，使用这种透明方式
         }
 
+        UMConfigure.init(this, "5b9a0d00f29d984934000080", null,0, null);
         main_viewPager=findViewById(R.id.main_viewpager);
         main_level=findViewById(R.id.title1);
         main_level.setOnClickListener(this);
@@ -76,11 +95,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         adapter=new MainPagerAdapter(getSupportFragmentManager(),fragments);
         main_viewPager.setAdapter(adapter);
         main_viewPager.addOnPageChangeListener(this);
-        //replace(physicalTrainingFragment,R.id.content);
         //getMacAddress();
+        if(checkPermissions(PERMISSIONS)){
+            ActivityCompat.requestPermissions(this,PERMISSIONS,OPEN_REQUEST_CODE);
+        }
     }
 
-    /*public void replace(Fragment fragment, int id){
+    @Override
+    protected void onPause() {
+        super.onPause();
+        MobclickAgent.onPause(this);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        MobclickAgent.onResume(this);
+    }
+/*public void replace(Fragment fragment, int id){
         FragmentManager fragmentManager = getFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(id, fragment);
@@ -119,6 +151,60 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);//设置透明导航栏
         }
     }*/
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode==OPEN_REQUEST_CODE){
+            if(checkPermissions(PERMISSIONS)){
+                ActivityCompat.requestPermissions(this,PERMISSIONS,OPEN_REQUEST_CODE);
+            }
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        if(!requestPermissionsResult(grantResults)){
+            toSetPermissions();
+        }
+    }
+
+    private boolean requestPermissionsResult(int [] grantResults){
+        for (int grantResult:grantResults){
+            if(grantResult==PackageManager.PERMISSION_DENIED){
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    private void toSetPermissions(){
+        AlertDialog.Builder dialog=new AlertDialog.Builder(this);
+        dialog.setTitle("开启权限");
+        dialog.setMessage("请去设置界面开启相应权限，否则会影响程序功能");
+        dialog.setPositiveButton("去设置", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Intent intent=new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+                Uri uri = Uri.fromParts("package", getPackageName(), null);
+                intent.setData(uri);
+                startActivityForResult(intent,OPEN_REQUEST_CODE);
+                dialog.dismiss();
+            }
+        }).create();
+        dialog.setCancelable(false);
+        dialog.show();
+
+    }
+
+    private boolean checkPermissions(String [] permissions){
+        for (String permission : permissions){
+            return ContextCompat.checkSelfPermission(this,permission)== PackageManager.PERMISSION_DENIED;
+        }
+        return false;
+    }
 
     public void getMacAddress(){
         String macSerial = null;

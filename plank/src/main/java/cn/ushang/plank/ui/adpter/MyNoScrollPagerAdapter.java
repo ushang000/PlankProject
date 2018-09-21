@@ -10,7 +10,7 @@ import cn.ushang.plank.model.Exercise;
 import cn.ushang.plank.ui.activity.TrainingFragment;
 
 /**
- * Created by shao on 2018/9/3.
+ * Created by ushang on 2018/9/3.
  */
 
 public class MyNoScrollPagerAdapter extends FragmentPagerAdapter {

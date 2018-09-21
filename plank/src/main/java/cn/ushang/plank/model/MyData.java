@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by shao on 2018/9/4.
+ * Created by ushang on 2018/9/4.
  */
 
 public class MyData implements Serializable {

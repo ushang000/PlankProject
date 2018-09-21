@@ -3,7 +3,7 @@ package cn.ushang.plank.utils;
 import android.content.Context;
 
 /**
- * Created by shao on 2018/9/6.
+ * Created by ushang on 2018/9/6.
  */
 
 public class ResourceGet {
