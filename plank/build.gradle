@@ -4,10 +4,10 @@ android {
     compileSdkVersion 26
     defaultConfig {
         applicationId "cn.ushang.plank"
-        minSdkVersion 15
+        minSdkVersion 19
         targetSdkVersion 26
         versionCode 1
-        versionName "1.0"
+        versionName "1.01"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
@@ -32,4 +32,6 @@ dependencies {
     implementation 'com.github.PhilJay:MPAndroidChart:v3.0.3'
     implementation files('libs/umeng-analytics-7.5.3.jar')
     implementation files('libs/umeng-common-1.5.3.jar')
+    implementation 'com.github.chenupt.android:springindicator:1.0.2@aar'
+    implementation 'com.github.juyao:WaterDropIndicatorDemo:v1.0.2'
 }

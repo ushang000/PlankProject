@@ -28,8 +28,8 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_below="@id/name"
-            android:layout_marginTop="10dp"
             android:text="@string/level"
+            android:layout_alignParentBottom="true"
             android:textColor="#fff"
             android:textSize="18sp"
             />
@@ -41,8 +41,20 @@
             android:layout_below="@id/name"
             android:layout_toRightOf="@id/title1"
             android:gravity="center"
-            android:layout_marginTop="10dp"
             android:text="@string/statistics"
+            android:layout_alignParentBottom="true"
+            android:textColor="#fff"
+            android:textSize="18sp"
+            />
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/title_teach"
+            android:layout_below="@id/name"
+            android:layout_toRightOf="@id/title2"
+            android:gravity="center"
+            android:text="@string/teach"
+            android:layout_alignParentBottom="true"
             android:textColor="#fff"
             android:textSize="18sp"
             />

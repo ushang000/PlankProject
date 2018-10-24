@@ -1,5 +1,7 @@
 package cn.ushang.plank.model;
 
+import com.google.gson.JsonObject;
+
 import java.io.Serializable;
 
 /**
@@ -35,6 +37,7 @@ public class Exercise implements Serializable {
     public void setName_key(String name_key) {
         this.name_key = name_key;
     }
+
 }
 
 

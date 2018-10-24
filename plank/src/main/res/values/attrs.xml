@@ -8,5 +8,10 @@
         <attr name="metaButtonBarStyle" format="reference" />
         <attr name="metaButtonBarButtonStyle" format="reference" />
     </declare-styleable>
+    <declare-styleable name="FlipLayout">
+        <attr name="flipTextBackground" format="color|reference"/>
+        <attr name="flipTextSize" format="dimension"/>
+        <attr name="flipTextColor" format="color"/>
+    </declare-styleable>
 
 </resources>

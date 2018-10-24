@@ -3,6 +3,7 @@ package cn.ushang.plank.ui.activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
@@ -10,13 +11,17 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
 
+import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
 import cn.ushang.plank.R;
 import cn.ushang.plank.model.LevelData;
 import cn.ushang.plank.ui.adpter.MyNoScrollPagerAdapter;
+import cn.ushang.plank.ui.view.FlipLayout;
 import cn.ushang.plank.ui.view.NoScrollViewPager;
+import github.chenupt.springindicator.SpringIndicator;
+import top.dodeman.waterdropindicator.WaterDropIndicator;
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -41,12 +46,14 @@ public class PhysicalTrainingActivity extends AppCompatActivity {
      */
     private static final int UI_ANIMATION_DELAY = 300;
     private final Handler mHideHandler = new Handler();
-    private TextView train_current;
+    private FlipLayout train_current;
     private int size=0;
     private NoScrollViewPager viewPager;
     private TextView train_title;
+    private TextView train_sum;
     private LevelData mLeveldata;
     private MyNoScrollPagerAdapter adapter;
+    private WaterDropIndicator indicator;
     private List<TrainingFragment> trainingFragments = new ArrayList<>();
     /*private final Runnable mHidePart2Runnable = new Runnable() {
         @SuppressLint("InlinedApi")
@@ -112,14 +119,25 @@ public class PhysicalTrainingActivity extends AppCompatActivity {
         viewPager = findViewById(R.id.train_viewpager);
         train_title = findViewById(R.id.train_title);
         train_current=findViewById(R.id.train_current);
+        train_sum=findViewById(R.id.train_sum);
+        /*try {
+            Field mField = ViewPager.class.getDeclaredField("mScroller");
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+        }*/
+        //indicator=findViewById(R.id.indicator);
         Intent intent = getIntent();
         mLeveldata = (LevelData) intent.getExtras().getSerializable("level");
         size=mLeveldata.getExercises().size();
-        train_current.setText("第 1/"+size+" 回合");
+        train_current.flip(1);
+        train_sum.setText("/ "+size+" 回合");
+        //train_current.setText("第 1/"+size+" 回合");
         train_title.setText(getTitleString(mLeveldata.getDesc_key()));
         train_title.setTextColor(Color.parseColor(mLeveldata.getColor_key()));
         adapter = new MyNoScrollPagerAdapter(getSupportFragmentManager(), mLeveldata.getExercises());
         viewPager.setAdapter(adapter);
+        /*indicator.setViewPager(viewPager);
+        indicator.setItemNum(size);*/
     }
 
     private String getTitleString(String str) {
@@ -129,7 +147,8 @@ public class PhysicalTrainingActivity extends AppCompatActivity {
 
     public void startNextPage() {
         viewPager.setCurrentItem(viewPager.getCurrentItem() + 1);
-        train_current.setText("第 "+(viewPager.getCurrentItem()+1)+"/"+size+" 回合");
+        train_current.smoothFlip(1,false);
+        //train_current.setText("第 "+(viewPager.getCurrentItem()+1)+"/"+size+" 回合");
     }
 
     public void goFinish() {

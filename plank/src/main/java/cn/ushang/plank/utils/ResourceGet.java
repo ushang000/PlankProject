@@ -22,12 +22,17 @@ public class ResourceGet {
     }
 
     public String getNameString(String str) {
-        int identifier = mContext.getResources().getIdentifier(str, "string", mContext.getPackageName());
+        int identifier = mContext.getResources().getIdentifier(str, "string", mContext.getApplicationInfo().packageName);
         return identifier == 0 ? null : mContext.getString(identifier);
     }
 
-    public int getDrawableResourceId(String str) {
-        return mContext.getResources().getIdentifier(str, "mipmap", mContext.getPackageName());
+    public Integer getDrawableResourceId(String str) {
+        return mContext.getResources().getIdentifier(str, "mipmap", mContext.getApplicationInfo().packageName);
+    }
+
+    public Integer getSoundResourceId(String str){
+        int identifier=mContext.getResources().getIdentifier(str,"raw",mContext.getApplicationInfo().packageName);
+        return identifier == 0 ? null : Integer.valueOf(identifier);
     }
 
 }

@@ -2,8 +2,11 @@
     <string name="app_name">Plank 5分钟</string>
     <string name="level">训练</string>
     <string name="statistics">统计数据</string>
+    <string name="teach">我是教练</string>
+    <string name="add_to_level">添加到训练</string>
     <string name="crunches">ABS Workout\n让你的腹肌更快塑造成型</string>
-    <string name="tips2">健身虽好，可不要贪恋哦</string>
+    <string name="tips2">健身虽好，可不要贪练哦</string>
+    <string name="level_teach">教练指导</string>
     <string name="level_1">肥宅青铜</string>
     <string name="level_2">伸手白银</string>
     <string name="level_3">入门黄金</string>
@@ -36,8 +39,8 @@
     <string name="side_plank_hip_dips_left">左臀</string>
     <string name="side_plank_hip_dips_right">右臀</string>
     <string name="side_plank_left">侧左</string>
-    <string name="side_plank_raised_leg_left">抬左脚</string>
-    <string name="side_plank_raised_leg_right">抬右脚</string>
+    <string name="side_plank_raised_leg_left">侧右抬脚</string>
+    <string name="side_plank_raised_leg_right">侧左抬脚</string>
     <string name="side_plank_right">侧右</string>
     <string name="tips">谨记：中途退出将丢失数据!</string>
 
@@ -47,5 +50,6 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
 
 </resources>

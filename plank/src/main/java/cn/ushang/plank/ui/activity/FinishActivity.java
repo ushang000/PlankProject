@@ -20,6 +20,7 @@ import java.util.Calendar;
 
 import cn.ushang.plank.R;
 import cn.ushang.plank.utils.ResourceGet;
+import cn.ushang.plank.utils.VarUtils;
 
 public class FinishActivity extends AppCompatActivity {
 
@@ -45,6 +46,10 @@ public class FinishActivity extends AppCompatActivity {
         //String dataKey="20180910";
         Intent intent = getIntent();
         duration=intent.getIntExtra("duration", 0);
+        if(duration>=375000){
+            VarUtils.isLocked=false;
+            plankDatas.edit().putBoolean("isLocked",VarUtils.isLocked).apply();
+        }
         resource = new ResourceGet(this);
         finishLevelName = findViewById(R.id.finish_level_name);
         finishLevelTime = findViewById(R.id.finish_level_time);
@@ -57,7 +62,7 @@ public class FinishActivity extends AppCompatActivity {
         float beforeDatas=plankDatas.getFloat(dataKey,0);
         plankDatas.edit()
                 .putFloat(dataKey, (float) duration/(1000*60)+beforeDatas)
-                .commit();
+                .apply();
     }
 
     public void finished(View view) {

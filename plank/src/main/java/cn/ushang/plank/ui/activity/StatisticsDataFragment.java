@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.AxisBase;
@@ -137,6 +138,7 @@ public class StatisticsDataFragment extends LazyLoadFragment implements View.OnC
         prevWeek.setOnClickListener(this);
         nextWeek=findViewById(R.id.nextWeek);
         nextWeek.setOnClickListener(this);
+        nextWeek.setEnabled(false);
         if(plankData==null){
             plankData = mParentActivity.getSharedPreferences("StatisticsDatas", MODE_PRIVATE);
         }
@@ -186,7 +188,17 @@ public class StatisticsDataFragment extends LazyLoadFragment implements View.OnC
 
     private String getWeekLastDay(int preFirstDayOfWeek){
         Calendar calendar = Calendar.getInstance();
+        long current=calendar.getTimeInMillis();
         calendar.add(Calendar.DATE,preFirstDayOfWeek+6);
+        long now=calendar.getTimeInMillis();
+        Log.i("shao","currentTime : "+current+" nowTime : "+now);
+        if(now>=current){
+            nextWeek.setEnabled(false);
+            Glide.with(mParentActivity).load(R.mipmap.br_next_fan).into(nextWeek);
+        }else {
+            nextWeek.setEnabled(true);
+            Glide.with(mParentActivity).load(R.mipmap.br_next).into(nextWeek);
+        }
         int month=calendar.get(Calendar.MONTH)+1;
         int day=calendar.get(Calendar.DAY_OF_MONTH);
         return month+"月"+day;
